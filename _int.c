@@ -13,7 +13,10 @@ int _int(va_list args, int count)
 	
 	s = itoa(i);
 	if (i < 0)
+	{
 		write(1, "-", 1);
+		count++;
+	}
 	write(1, s, strlen(s));
 	count += strlen(s);
 	return (count);
