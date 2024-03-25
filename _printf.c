@@ -12,7 +12,8 @@ int _printf(const char* format, ...)
 	int j;
 	SF array[] = {
 		{"s", _string},
-	//	{"d", _int},
+		{"d", _int},
+		{"i", _int},
 		{NULL, NULL}
 	};
 
@@ -35,6 +36,7 @@ int _printf(const char* format, ...)
 			if (array[i].flag)	
 				format += strlen(array[i].flag) + 1;
 		}
+		(void)(*format == '%' && *(format + 1) == '%' && format++);
 		write (1, format, 1);
 		count++;
 		format++;
