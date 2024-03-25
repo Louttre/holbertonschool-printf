@@ -10,5 +10,6 @@ typedef struct specfunc
 } SF;
 int _printf(const char *format, ...);
 int _string(va_list, int);
+int _int(va_list, int);
 
 #endif

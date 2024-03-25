@@ -1,0 +1,16 @@
+#include "main.h"
+#include <stdio.h>
+#include <unistd.h>
+#include <stdarg.h>
+#include <string.h>
+#include <stdlib.h>
+
+int _int(va_list args, int count)
+{
+	int i = va_arg(args, int);
+	char *s;
+	itoa(i, s, 10);
+
+	count += strlen(s);
+	return (count);
+}

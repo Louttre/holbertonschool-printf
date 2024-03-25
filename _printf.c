@@ -3,16 +3,16 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <string.h>
+#include <stddef.h>
 int _printf(const char* format, ...)
 {
 	int count = 0;
 	int i = 0;
 	va_list args;
-	size_t lenf = strlen(format);
 	int j;
 	SF array[] = {
 		{"s", _string},
-		//{"c", _char},
+	//	{"d", _int},
 		{NULL, NULL}
 	};
 
@@ -30,8 +30,10 @@ int _printf(const char* format, ...)
 					count = j;
 					break;
 				}
+				i++;
 			}
-			format += strlen(array[i].flag) + 1;
+			if (array[i].flag)	
+				format += strlen(array[i].flag) + 1;
 		}
 		write (1, format, 1);
 		count++;

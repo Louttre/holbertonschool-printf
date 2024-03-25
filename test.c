@@ -6,6 +6,7 @@
 
 int main(void)
 {
-	_printf("abcd%sefghi\n", "\nHello\n");
+	int c = _printf("abcd%fefghi\n");
+	printf("%d\n", c);
 	return (0);
 }
