@@ -5,10 +5,10 @@
 
 typedef struct specfunc
 {
-	char *flag;
-	void (*func)(va_list);
+        char *flag;
+        int (*func)(va_list, int);
 } SF;
 int _printf(const char *format, ...);
-void _string(va_list args);
+int _string(va_list, int);
 
 #endif

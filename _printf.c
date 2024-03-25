@@ -9,6 +9,7 @@ int _printf(const char* format, ...)
 	int i = 0;
 	va_list args;
 	size_t lenf = strlen(format);
+	int j;
 	SF array[] = {
 		{"s", _string},
 		//{"c", _char},
@@ -25,11 +26,12 @@ int _printf(const char* format, ...)
 			{
 				if (*array[i].flag == *(format + 1))
 				{
-					array[i].func(args);
+					j = array[i].func(args, count);
+					count = j;
 					break;
 				}
 			}
-			format += 2;
+			format += strlen(array[i].flag) + 1;
 		}
 		write (1, format, 1);
 		count++;
