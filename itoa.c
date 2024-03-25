@@ -21,7 +21,7 @@ char *itoa(int i)
 	}
 	s = malloc(sizeof(char) * (leni + 1));
 	s[leni] = '\0';
-	while (leni >= 0)
+	while (leni > 0)
 	{
 		s[leni - 1] = (i % 10) + '0';
 		i /= 10;
