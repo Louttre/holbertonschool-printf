@@ -4,8 +4,10 @@
 #include <stdarg.h>
 #include <string.h>
 
-void _string(va_list args)
+int _string(va_list args, int count)
 {
-	char *s = va_arg(args, char *);
-	write(1, s, strlen(s));
+        char *s = va_arg(args, char *);
+        write(1, s, strlen(s));
+        count += strlen(s);
+        return (count);
 }
