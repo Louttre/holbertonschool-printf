@@ -4,7 +4,12 @@
 #include <stdarg.h>
 #include <string.h>
 #include <stdlib.h>
-
+/**
+ * _int - print an integer
+ * @args: list of arguments
+ * @count: number of character
+ * Return: count + number of digit of the integer
+ */
 int _int(va_list args, int count)
 {
 	char *s;
