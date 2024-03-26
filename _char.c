@@ -5,6 +5,5 @@ int _char(va_list args, int count)
 	char c = va_arg(args, char);
 	
 	write(1, &c, 1);
-	count += 1;
-	return (count);
+	return (count + 1);
 }
