@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- * _itoa - convert an integer to a string
+ * itoa - convert an integer to a string
  * @i: interger to convert
  * Return: string
  */
@@ -14,7 +14,7 @@ char *itoa(int i)
 	char *s;
 	int count;
 	int leni = 0;
-	
+
 	if (i < 0)
 		i = -i;
 	count = i;
@@ -31,7 +31,7 @@ char *itoa(int i)
 	{
 		s[leni - 1] = (i % 10) + '0';
 		i /= 10;
-		leni--;	
+		leni--;
 	}
 	return (s);
 }

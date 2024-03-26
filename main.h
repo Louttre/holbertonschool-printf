@@ -10,8 +10,8 @@
  */
 typedef struct specfunc
 {
-        char *flag;
-        int (*func)(va_list, int);
+	char *flag;
+	int (*func)(va_list, int);
 } SF;
 int _printf(const char *format, ...);
 int _string(va_list, int);

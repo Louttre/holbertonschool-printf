@@ -9,7 +9,7 @@
  * @format: stringer that contain or not some specifiers
  * Return: length of the string
  */
-int _printf(const char* format, ...)
+int _printf(const char *format, ...)
 {
 	int count = 0;
 	int i = 0;
@@ -39,11 +39,11 @@ int _printf(const char* format, ...)
 				}
 				i++;
 			}
-			if (array[i].flag)	
+			if (array[i].flag)
 				format += strlen(array[i].flag) + 1;
 		}
 		(void)(*format == '%' && *(format + 1) == '%' && format++);
-		write (1, format, 1);
+		write(1, format, 1);
 		count++;
 		format++;
 	}

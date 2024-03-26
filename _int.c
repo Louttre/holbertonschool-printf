@@ -15,7 +15,7 @@ int _int(va_list args, int count)
 	char *s;
 	int j = va_arg(args, int);
 	int i = convert_int(j);
-	
+
 	s = itoa(i);
 	if (i < 0)
 	{
