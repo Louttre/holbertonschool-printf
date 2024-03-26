@@ -19,5 +19,6 @@ int _int(va_list args, int count)
 	}
 	write(1, s, strlen(s));
 	count += strlen(s);
+	free(s);
 	return (count);
 }
