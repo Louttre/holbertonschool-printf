@@ -4,6 +4,11 @@
 #include <stdarg.h>
 #include <string.h>
 #include <stddef.h>
+/**
+ * _printf - print a string to stdout
+ * @format: stringer that contain or not some specifiers
+ * Return: len of the string
+ */
 int _printf(const char* format, ...)
 {
 	int count = 0;
