@@ -11,6 +11,7 @@ int _printf(const char* format, ...)
 	va_list args;
 	int j;
 	SF array[] = {
+		{"c", _char},
 		{"s", _string},
 		{"d", _int},
 		{"i", _int},
