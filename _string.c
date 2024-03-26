@@ -6,7 +6,8 @@
 /**
  * _string - print a string
  * @args: string to print
- * Return: count + lenght of the printed string
+ * @count: length of string
+ * Return: count + length of the printed string
  */
 int _string(va_list args, int count)
 {
