@@ -20,6 +20,8 @@ char *itoa(int i)
 		leni++;
 	}
 	s = malloc(sizeof(char) * (leni + 1));
+	if (s == NULL)
+		return (NULL);
 	s[leni] = '\0';
 	while (leni > 0)
 	{
