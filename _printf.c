@@ -7,7 +7,7 @@
 /**
  * _printf - print a string to stdout
  * @format: stringer that contain or not some specifiers
- * Return: len of the string
+ * Return: length of the string
  */
 int _printf(const char* format, ...)
 {
