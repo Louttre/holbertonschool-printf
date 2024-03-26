@@ -4,7 +4,11 @@
 #include <stdarg.h>
 #include <string.h>
 #include <stdlib.h>
-
+/**
+ * _itoa - convert an integer to a string
+ * @i: interger to convert
+ * Return: string
+ */
 char *itoa(int i)
 {
 	char *s;
