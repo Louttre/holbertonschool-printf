@@ -34,7 +34,8 @@ int _printf(const char *format, ...)
 				if (*array[i].flag == *(format + 1))
 				{
 					j = array[i].func(args, count);
-					count = j;
+					if (j != 0)	
+						count = j;
 					break;
 				}
 				i++;
