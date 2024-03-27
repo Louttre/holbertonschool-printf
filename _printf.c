@@ -5,6 +5,18 @@
 #include <string.h>
 #include <stddef.h>
 /**
+ * write_increment - put a char to stdout and increment count
+ * @format: character to print
+ * @count: count
+ * Return: 0 if success
+ */
+int write_increment(const char *format, int *count)
+{
+	write(1, format, 1);
+	(*count)++;
+	return (0);
+}
+/**
  * _printf - print a string to stdout
  * @format: stringer that contain or not some specifiers
  * Return: length of the string
@@ -35,7 +47,7 @@ int _printf(const char *format, ...)
 				if (*array[i].flag == *(format + 1))
 				{
 					j = array[i].func(args, count);
-					if (j != 0)	
+					if (j != 0)
 						count = j;
 					break;
 				}
@@ -43,27 +55,21 @@ int _printf(const char *format, ...)
 			}
 			if (array[i].flag)
 				format += strlen(array[i].flag) + 1;
-			else if (*(format + 1) == '%')
-			{
-				write(1, format, 1);
-				count++;
-				format += 2;
-			}
 			else
 			{
-				write(1, format, 1);
-				count++;
+				write_increment(format, &count);
 				format++;
 			}
+			if (*format == '%')
+				format++;
 			if (*format == '\0')
 				break;
 		}
 		else
-			{
-                                write(1, format, 1);
-                                count++;
-                                format++;
-                        }
+		{
+			write_increment(format, &count);
+			format++;
+		}
 	}
 	va_end(args);
 	return (count);
