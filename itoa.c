@@ -15,6 +15,8 @@ char *itoa(int i)
 	int count;
 	int leni = 0;
 
+	if (i == 0)
+		return (0);
 	if (i < 0)
 		i = -i;
 	count = i;

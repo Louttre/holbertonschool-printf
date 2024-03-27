@@ -16,6 +16,11 @@ int _int(va_list args, int count)
 	int j = va_arg(args, int);
 
 	s = itoa(j);
+	if (s == 0)
+	{
+		write(1, "0", 1);
+		return (count++);
+	}
 	if (j < 0)
 	{
 		write(1, "-", 1);
