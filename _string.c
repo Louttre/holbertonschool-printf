@@ -16,7 +16,7 @@ int _string(va_list args, int count)
 	if (s == NULL)
 	{
 		_printf("%s", "(null)");
-		return (0);
+		return (count + 6);
 	}
 	write(1, s, strlen(s));
 	count += strlen(s);
