@@ -15,7 +15,7 @@ int _string(va_list args, int count)
 
 	if (s == NULL)
 	{
-		_printf("%s", "(NULL)");
+		_printf("%s", "(null)");
 		return (0);
 	}
 	write(1, s, strlen(s));
