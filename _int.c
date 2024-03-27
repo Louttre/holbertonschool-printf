@@ -19,7 +19,7 @@ int _int(va_list args, int count)
 	if (s == 0)
 	{
 		write(1, "0", 1);
-		return (count++);
+		return (count + 1);
 	}
 	if (j < 0)
 	{
