@@ -18,11 +18,11 @@ char *itoa(int i)
 	int checkint_min = 0;
 
 	if (i == INT_MIN)
-        {
-                checkint_min = 1;
-                i = 147483648;
-                leni = 1;
-        }
+	{
+		checkint_min = 1;
+		i = 147483648;
+		leni = 1;
+	}
 	if (i == 0)
 		return (0);
 	if (i < 0)
@@ -33,7 +33,10 @@ char *itoa(int i)
 		count /= 10;
 		leni++;
 	}
-	s = checkint_min ? malloc(sizeof(char) * (leni + 2)) : malloc(sizeof(char) * (leni + 1));
+	if (checkint_min)
+		s = malloc(sizeof(char) * (leni + 2));
+	else
+		s = malloc(sizeof(char) * (leni + 1));
 	if (s == NULL)
 		return (NULL);
 	s[leni] = '\0';
