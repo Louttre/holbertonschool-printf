@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 				}
 				i++;
 			}
-			if (array[i].flag)
+			if (array[i].flag && *(format + 1) != '\0')
 				format += strlen(array[i].flag) + 1;
 		}
 		(void)(*format == '%' && *(format + 1) == '%' && format++);
