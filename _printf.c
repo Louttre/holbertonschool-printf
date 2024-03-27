@@ -44,10 +44,17 @@ int _printf(const char *format, ...)
 			if (*format == '\0')
 				break;
 		}
-		(void)(*format == '%' && *(format + 1) == '%' && format++);
-		write(1, format, 1);
-		count++;
-		format++;
+		if (*format == '%' && *(format + 1) == '%')
+		{	
+			write(1, format, 1);
+			format += 2;
+		}
+		else if (*format != '%')
+		{
+			write(1, format, 1);
+			count++;
+			format++;
+		}
 	}
 	va_end(args);
 	return (count);
