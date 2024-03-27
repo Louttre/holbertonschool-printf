@@ -14,7 +14,10 @@ int _string(va_list args, int count)
 	char *s = va_arg(args, char *);
 
 	if (s == NULL)
+	{
+		_printf("%s", "(NULL)");
 		return (0);
+	}
 	write(1, s, strlen(s));
 	count += strlen(s);
 	return (count);
