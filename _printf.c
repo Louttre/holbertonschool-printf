@@ -22,7 +22,8 @@ int _printf(const char *format, ...)
 		{"i", _int},
 		{NULL, NULL}
 	};
-
+	if (format == NULL || (*format == '%' && !*(format + 1)))
+		return (-1);
 	va_start(args, format);
 	while (format && *format)
 	{
