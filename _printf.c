@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
 			}
 			if (array[i].flag)
 				format += strlen(array[i].flag) + 1;
-			else if (*format == '\0')
+			if (*format == '\0')
 				break;
 		}
 		(void)(*format == '%' && *(format + 1) == '%' && format++);
