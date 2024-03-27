@@ -62,7 +62,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				write_increment(format, &count);	
+				write_increment(format, &count);
 				format++;
 			}
 			if (*format == '\0')
