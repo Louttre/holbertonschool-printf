@@ -55,13 +55,16 @@ int _printf(const char *format, ...)
 			}
 			if (array[i].flag)
 				format += strlen(array[i].flag) + 1;
-			else
+			else if (*(format + 1) == '%')
 			{
 				write_increment(format, &count);
+				format += 2;
+			}
+			else
+			{
+				write_increment(format, &count);	
 				format++;
 			}
-			if (*format == '%')
-				format++;
 			if (*format == '\0')
 				break;
 		}
