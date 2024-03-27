@@ -23,17 +23,11 @@ int write_increment(const char *format, int *count)
  */
 int _printf(const char *format, ...)
 {
-	int count = 0;
-	int i = 0;
+	int count = 0, i = 0, j;
 	va_list args;
-	int j;
 	SF array[] = {
-		{"c", _char},
-		{"s", _string},
-		{"d", _int},
-		{"i", _int},
-		{NULL, NULL}
-	};
+		{"c", _char}, {"s", _string}, {"d", _int}, {"i", _int}, {NULL, NULL}};
+
 	if (format == NULL || (*format == '%' && !*(format + 1)))
 		return (-1);
 	va_start(args, format);
@@ -54,25 +48,17 @@ int _printf(const char *format, ...)
 				i++;
 			}
 			if (array[i].flag)
-				format += strlen(array[i].flag) + 1;
+				format += strlen(array[i].flag);
 			else if (*(format + 1) == '%')
-			{
-				write_increment(format, &count);
-				format += 2;
-			}
+				write_increment(format++, &count);
 			else
-			{
 				write_increment(format, &count);
-				format++;
-			}
 			if (*format == '\0')
 				break;
 		}
 		else
-		{
 			write_increment(format, &count);
-			format++;
-		}
+		format++;
 	}
 	va_end(args);
 	return (count);
