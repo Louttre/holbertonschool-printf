@@ -14,10 +14,9 @@ int _int(va_list args, int count)
 {
 	char *s;
 	int j = va_arg(args, int);
-	int i = convert_int(j);
 
-	s = itoa(i);
-	if (i < 0)
+	s = itoa(j);
+	if (j < 0)
 	{
 		write(1, "-", 1);
 		count++;
