@@ -18,4 +18,7 @@ int _string(va_list, int);
 int _int(va_list, int);
 char *itoa(int i);
 int _char(va_list, int);
+int _binary(va_list, int);
+char *reverse(char *);
+
 #endif
