@@ -33,10 +33,10 @@ int _binary(va_list args, int count)
 	}
 	s[i] = '\0';
 	reverse(s);
-	for (; *s; i++)
+	for (; *s;)
 	{
 		write(1, s, 1);
 		s++;
 	}
-	return (count += strlen(s));
+	return (count += i);
 }
