@@ -20,5 +20,6 @@ char *itoa(int i);
 int _char(va_list, int);
 int _binary(va_list, int);
 char *reverse(char *);
+char *convert_binary(int);
 
 #endif

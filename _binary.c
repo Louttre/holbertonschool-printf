@@ -13,30 +13,17 @@
 int _binary(va_list args, int count)
 {
 	int num = va_arg(args, int);
-	unsigned int i = 0;
 	char *s;
-	int lennum = num;
+	
+	if (num == 0)
+	{
+		write(1 , "0", 1);
+		return (count + 1);
+	}
+	s = convert_binary(num);
+	if (num < 0)
+		write(1, "-", 1);
+	write(1, s, strlen(s));
 
-	while (lennum > 0)
-	{
-		lennum /= 2;
-		i++;
-	}
-	s = malloc(sizeof(char) * (i + 1));
-	i = 0;
-
-	while (num > 0)
-	{
-		s[i] = num % 2 + '0';
-		num /= 2;
-		i++;
-	}
-	s[i] = '\0';
-	reverse(s);
-	for (; *s;)
-	{
-		write(1, s, 1);
-		s++;
-	}
-	return (count += i);
+	return (count += strlen(s));
 }
