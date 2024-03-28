@@ -21,8 +21,6 @@ int _binary(va_list args, int count)
 		return (count + 1);
 	}
 	s = convert_binary(num);
-	if (num < 0)
-		write(1, "-", 1);
 	write(1, s, strlen(s));
 
 	return (count += strlen(s));
