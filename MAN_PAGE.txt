@@ -1,0 +1,46 @@
+PRINTF(3)                  Linux Programmer's Manual                 PRINTF(3)
+
+NAME
+       _printf - print formatted output to stdout
+
+SYNOPSIS
+       #include "main.h"
+
+       int _printf(const char *format, ...);
+
+DESCRIPTION
+       The _printf function prints formatted output to the standard output
+       (stdout). It behaves similarly to the printf function in the C standard
+       library, but it is a custom implementation.
+
+       The format string specifies how subsequent arguments are converted for
+       output.
+
+RETURN VALUE
+       The _printf function returns the number of characters printed (excluding
+       the null byte used to end output to strings), or -1 if an error occurs.
+
+EXAMPLES
+       #include "main.h"
+       #include <stdio.h>
+
+       int main(void)
+       {
+           _printf("Hello, %s!\n", "world");
+           return 0;
+       }
+
+AUTHORS
+       Written by RUEDA Johan.
+
+REPORTING BUGS
+       Report bugs to 8864@holbertonstudents.com.
+
+COPYRIGHT
+       Copyright 2024 HolbertonSchool.
+
+AVAILABILITY
+       The _printf function is available under the terms of the Holberton
+       license.
+
+Linux                             MARCH 2024                        PRINTF(3)
