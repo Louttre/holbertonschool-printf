@@ -14,7 +14,7 @@ int _binary(va_list args, int count)
 {
 	int num = va_arg(args, int);
 	char *s;
-	
+
 	if (num == 0)
 	{
 		write(1, "0", 1);
