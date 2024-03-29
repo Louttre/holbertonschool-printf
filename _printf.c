@@ -26,8 +26,7 @@ int _printf(const char *format, ...)
 	int count = 0, i = 0, j;
 	va_list args;
 	SF array[] = {
-		{"c", _char}, {"s", _string}, {"d", _int}, {"i", _int}, {"b", _binary}, 
-		{NULL, NULL}};
+		{"c", _char}, {"s", _string}, {"d", _int}, {"i", _int}, {NULL, NULL}};
 
 	if (format == NULL || (*format == '%' && !*(format + 1)))
 		return (-1);
