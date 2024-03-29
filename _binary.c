@@ -17,7 +17,7 @@ int _binary(va_list args, int count)
 	
 	if (num == 0)
 	{
-		write(1 , "0", 1);
+		write(1, "0", 1);
 		return (count + 1);
 	}
 	s = convert_binary(num);
