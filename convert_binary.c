@@ -32,7 +32,7 @@ char *convert_binary(int num)
 		s = malloc(sizeof(char) * (i + 2));
 		i += 1;
 	}
-	else	
+	else
 		s = malloc(sizeof(char) * (i + 1));
 	s[i] = '\0';
 	if (s == NULL)
