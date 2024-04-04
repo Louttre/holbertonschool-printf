@@ -1,8 +1,8 @@
-# _Printf README
+# _printf README
 
 ## Description
 
-_Printf is a lightweight, simplified version of the C standard library function `printf`. This implementation provides basic formatting capabilities, allowing users to print strings, characters, and integers to the standard output. Designed for educational purposes or simple embedded systems, _printf demonstrates how variadic functions in C can be utilized to implement custom formatted output.
+_printf is a lightweight, simplified version of the C standard library function `printf`. This implementation provides basic formatting capabilities, allowing users to print strings, characters, and integers to the standard output. Designed for educational purposes or simple embedded systems, _printf demonstrates how variadic functions in C can be utilized to implement custom formatted output.
 
 ## Features
 
