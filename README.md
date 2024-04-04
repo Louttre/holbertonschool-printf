@@ -7,7 +7,7 @@ _printf is a lightweight, simplified version of the C standard library function 
 ## Features
 
 - Prints strings and characters to stdout.
-- Supports basic format specifiers: `%c` for characters, `%s` for strings, `%d` and `%i` for integers.
+- Supports basic format specifiers: `%c` for characters, `%s` for strings, `%d`, `%%` for '%' character and `%i` for integers.
 - Easy to integrate and use in any C project.
 - Demonstrates the use of variadic functions and parsing format specifiers.
 
@@ -22,7 +22,7 @@ To use _printf, you need:
 
 ### Installation
 
-1. **Download SimplePrintf**: Clone or download the SimplePrintf source code from the repository.
+1. **Download _printf**: Clone or download the _printf source code from the repository.
    
    ```
    https://github.com/Louttre/holbertonschool-printf.git
@@ -36,7 +36,7 @@ To use _printf, you need:
    #include "main.h"
    ```
 
-   Compile your project along with SimplePrintf. For example, if using GCC:
+   Compile your project along with _printf. For example, if using GCC:
 
    ```
    gcc myprogram.c _char.c _int.c _string.c itoa.c _printf.c -o myprogram 
@@ -51,6 +51,7 @@ _printf("Hello, World!\n");
 _printf("This is a character: %c\n", 'A');
 _printf("This is a string: %s\n", "Hello, World");
 _printf("Here's an integer: %d\n", 100);
+_printf("Here's a percentage : %%\n");
 ```
 
 ## Contributing
@@ -68,7 +69,7 @@ _printf is open-source software.
 
 ## Credits
 
-_printf was created by RUEDA Johan and SAFOU Evrade 
+_printf was created by RUEDA Johan and SAFOU Evrade.
 
 ## Support
 
