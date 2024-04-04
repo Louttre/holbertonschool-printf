@@ -25,7 +25,7 @@ To use _printf, you need:
 1. **Download SimplePrintf**: Clone or download the SimplePrintf source code from the repository.
    
    ```
-   [https://github.com/Louttre/holbertonschool-printf.git]
+   https://github.com/Louttre/holbertonschool-printf.git
    ```
 
 2. **Include _printf in Your Project**: Add `_printf.c` and `main.h` and all the files to your project's source directory.
